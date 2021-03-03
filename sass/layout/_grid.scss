@@ -8,11 +8,16 @@
     [class^="col-"]{
         // background-color: orangered;
         float: left;
-
         &:not(:last-child){
             margin-right: $gutter-horizontal;
+            @include respond(tab-port){
+                margin-right: 0;
+                margin-bottom: $gutter-vertical-small;
+            }    
         }
-
+        @include respond(tab-port){
+            width: 50rem !important;
+        }   
     }
 
     //all except last-child
